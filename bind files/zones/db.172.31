@@ -1,0 +1,21 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ns01.dynamicdso.org. admin.dynamicdso.org. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+; name servers - NS records
+      IN      NS      ns01.dynamicdso.org.
+
+; PTR Records
+50.53   IN      PTR     dc01.dynamicdso.org.    ; 172.31.53.50
+51.53   IN      PTR     dc02.dynamicdso.org.    ; 172.31.53.51
+51.52   IN      PTR     ftp01.dynamicdso.org.   ; 172.31.52.51
+52.52 	IN 		PTR		wp01.dynamicdso.org. 	; 172.31.52.52
+52.53 	IN 		PTR 	sql01.dynamicdso.org. 	; 172.31.53.52
+53.53 	IN 		PTR 	smb01.dynamicdso.org. 	; 172.31.53.53
